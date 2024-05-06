@@ -36,9 +36,9 @@ export const FlyteApiProvider = (props: FlyteApiProviderProps) => {
   const [loginExpired, setLoginExpired] = React.useState(false);
 
   // Whenever we detect expired credentials, trigger a login redirect automatically
+  console.log("disableAutomaticLogin", disableAutomaticLogin)
   React.useEffect(() => {
     if (loginExpired) {
-      console.log("disableAutomaticLogin", disableAutomaticLogin)
       window.location.href = getLoginUrl(flyteApiDomain);
     }
   }, [loginExpired]);
