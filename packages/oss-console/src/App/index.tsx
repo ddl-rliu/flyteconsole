@@ -62,7 +62,7 @@ export const AppComponent: React.FC<unknown> = () => {
             TransitionComponent={Collapse}
           >
             <QueryClientProvider client={queryClient}>
-              <FlyteApiProvider flyteApiDomain={env.ADMIN_API} disableAutomaticLogin>
+              <FlyteApiProvider flyteApiDomain={env.ADMIN_API}>
                 <APIContext.Provider value={apiState}>
                   <QueryAuthorizationObserver />
                   <SkeletonTheme
